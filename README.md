@@ -37,7 +37,6 @@ Este script adiciona um sistema de recompensas baseado no tempo jogado no servid
 
 ## 🎮 Comandos
 - `/rewards` → Abre o painel de recompensas.
-- `/coins` → Mostra o saldo de moedas do jogador.
 
 ## 🔧 Dependências
 - Banco de dados `oxmysql` (pode ser adaptado para outro sistema SQL).
