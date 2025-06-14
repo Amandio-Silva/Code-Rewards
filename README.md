@@ -1,60 +1,59 @@
-# Painel de Recompensas por Horas Jogadas - FiveM (Standalone)
+# Hours Played Rewards Panel - FiveM (Standalone)
+## 📌 Description
+This script adds a reward system based on playtime on the FiveM server. Players can accumulate hours and redeem rewards as they reach predefined milestones.
 
-## 📌 Descrição
-Este script adiciona um sistema de recompensas baseado no tempo jogado no servidor FiveM. Os jogadores podem acumular horas e resgatar recompensas conforme atingem metas pré-definidas.
+## ⚙️ Features
+- Stores player playtime.
+- Configurable reward system.
+- Support for different types of rewards (money, weapons, items).
+- NUI interface for progress visualization and reward redemption.
+- Fully standalone (no framework dependencies).
 
-## ⚙️ Funcionalidades
-- Armazena o tempo de jogo dos jogadores.
-- Sistema de recompensas configurável.
-- Suporte para diferentes tipos de recompensas (dinheiro, armas, itens).
-- Interface NUI para visualização do progresso e resgate de recompensas.
-- Totalmente standalone (sem dependência de frameworks).
-
-## 📂 Estrutura do Projeto
+## 📂 Project Structure
 ```
 /rewards
-│── config.lua        # Configuração de recompensas
+│── config.lua        # Reward configuration
 │── server/          
-│   ├── server.lua      # Lógica do servidor e banco de dados
+│   ├── server.lua      # Server logic and database
 │── client/          
-│   ├── cleient.lua      # Comunicação com a NUI e eventos do jogador
-│── ui/               # Interface gráfica NUI
-│   ├── index.html    # Página principal da interface
+│   ├── client.lua      # NUI communication and player events
+│── ui/               # NUI graphical interface
+│   ├── index.html    # Main interface page
 │   ├── css/         
-│   │   ├── style.css  # Estilização da interface
+│   │   ├── style.css  # Interface styling
 │   ├── js/          
-│   │   ├── script.js  # Interação com a interface
+│   │   ├── script.js  # Interface interaction
 ```
 
-## 🛠️ Instalação
-1. **Baixe e extraia os arquivos** na pasta `resources/rewards` do seu servidor FiveM.
-2. **Configure o `server.cfg`** adicionando a linha:
+## 🛠️ Installation
+1. **Download and extract the files** into your FiveM server's `resources/rewards` folder.
+2. **Configure the `server.cfg`** by adding the line:
    ```cfg
    ensure rewards
    ```
-3. **Edite o `config.lua`** para personalizar as recompensas.
-4. **Reinicie o servidor e pronto!**
+3. **Edit the `config.lua`** to customize the rewards.
+4. **Restart the server and you're done!**
 
-## 🎮 Comandos
-- `/rewards` → Abre o painel de recompensas.
+## 🎮 Commands
+- `/rewards` → Opens the rewards panel.
 
-## 🔧 Dependências
-- Banco de dados `oxmysql` (pode ser adaptado para outro sistema SQL).
+## 🔧 Dependencies
+- `oxmysql` database (can be adapted for other SQL systems).
 
-## 📝 Configuração (`config.lua`)
-Exemplo de configuração de recompensas:
+## 📝 Configuration (`config.lua`)
+Example reward configuration:
 ```lua
 Config.Rewards = {
     {
-        name = "100 Moedas",
-        description = "Ganhe 100 moedas por jogar",
+        name = "100 Coins",
+        description = "Earn 100 coins for playing",
         hours = 1,
         type = "money",
         amount = 100
     },
     {
-        name = "Pacote de Armas",
-        description = "Desbloqueie armas especiais",
+        name = "Weapon Package",
+        description = "Unlock special weapons",
         hours = 3,
         type = "weapon",
         items = {"WEAPON_PISTOL", "WEAPON_SMG"}
@@ -62,8 +61,8 @@ Config.Rewards = {
 }
 ```
 
-## 📞 Suporte
-Caso tenha dúvidas ou precise de suporte, entre em contato!
+## 📞 Support
+If you have questions or need support, please get in touch!
 
 ---
-✍️ **Criado por Amandio-Silva**
+✍️ **Created by Amandio-Silva**
