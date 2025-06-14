@@ -66,4 +66,4 @@ Config.Rewards = {
 Caso tenha dúvidas ou precise de suporte, entre em contato!
 
 ---
-✍️ **Criado por Code LAB**
+✍️ **Criado por Amandio-Silva**
